@@ -7,7 +7,7 @@ The original code: https://github.com/roboremo/ESP8266-WiFi-UART-Bridge
 
 
 **Note!** *The code has been edited for my needs. ESP8266 in STA mode with UDP protocol on port 14550 that connects to my ELRS Backpack of my RC Radio running Mavlink-RC. ESP sends the telemetry via UART to SP Racing F3 Flight Controller which is the brain of u360gts Antenna Tracker. 
-Code HAS NOT BEEN tested in AP mode and with TCP protocol, but should remain functional as the original.* 
+The code HAS NOT BEEN tested in AP mode and with TCP protocol, but should remain functional as the original.* 
 
 
 ## Key Features:
