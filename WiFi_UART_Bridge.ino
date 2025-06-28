@@ -1,15 +1,15 @@
 #include <ESP8266WiFi.h>
 
 // ========== Configuration ==========
-#define UART_BAUD 115200        // For better debug performance
+#define UART_BAUD 115200        
 #define packTimeout 5           // ms
-#define bufferSize 1024         // Reduced for memory safety
+#define bufferSize 8192         
 #define WIFI_TIMEOUT_MS 15000
 
-#define MODE_STA                // Use STA mode
+#define MODE_STA              
 // #define MODE_AP
 
-#define PROTOCOL_UDP            // Use UDP
+#define PROTOCOL_UDP           
 // #define PROTOCOL_TCP
 
 #define WIFI_LED_PIN 2          // GPIO2 (onboard LED on NodeMCU, active LOW)
@@ -163,8 +163,8 @@ void loop() {
       wifiReady = true;
       uartDisabled = false;
 
-      Serial.begin(UART_BAUD);                    // ✅ Only now!
-      digitalWrite(WIFI_LED_PIN, LOW);           // Turn LED ON
+      Serial.begin(UART_BAUD);                    
+      digitalWrite(WIFI_LED_PIN, LOW);           
       Serial.print("Reconnected. IP: ");
       Serial.println(WiFi.localIP());
 
@@ -179,7 +179,7 @@ void loop() {
     #endif
 
     } else {
-      // ❌ Don't start Serial = UART stays off
+      // Don't start Serial = UART stays off
       // Just silently fail
     }
   }
