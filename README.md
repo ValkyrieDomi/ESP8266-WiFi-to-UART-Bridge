@@ -42,7 +42,7 @@ The code HAS NOT BEEN tested in AP mode and with TCP protocol, but should remain
 
 * Serial data received from WiFi is sent out over UART.
 
-* If WiFi fails to connect or drops after being connected:
+**If WiFi fails to connect or drops after being connected:**
 
 * The UART interface is cleanly shut down (Serial.end()), releasing the serial port so you can connect to the FC’s USB without conflict.
 
